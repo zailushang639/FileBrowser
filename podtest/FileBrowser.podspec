@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "9.0"
   
-  s.source       = { :http => "./FileBrowser.zip" }
+  s.source       = { :http => "https://github.com/zailushang639/fileBrowser/blob/main/podtest/FileBrowser.zip" }
 
   s.source_files = "**/*.{h}"
 
