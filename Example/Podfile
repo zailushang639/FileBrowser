@@ -1,0 +1,6 @@
+use_frameworks!
+target 'FileBrowser_Tests' do
+  pod 'FileBrowser', :path => '../'
+  
+  
+end
