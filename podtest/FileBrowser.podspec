@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   
   s.source       = { :git => "https://github.com/zailushang639/fileBrowser.git" }
   
-  #spec.source       = { :git => "http://EXAMPLE/FileBrowser.git" }
+  ##spec.source       = { :git => "http://EXAMPLE/FileBrowser.git" }
 
   s.source_files = "**/*.{h}"
 
