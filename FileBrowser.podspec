@@ -16,4 +16,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'FileBrowser/Classes/**/*'
 
+  #依赖的系统库
+  s.frameworks = 'QuickLook', 'WebKit'
 end
