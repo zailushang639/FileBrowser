@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "9.0"
   
-  s.source       = { :http => "http://github.com/zailushang639/FileBrowser.git", :tag => "#{s.version}"}
+  s.source       = { :http => "http://github.com/zailushang639/fileBrowser.git", :tag => "#{s.version}"}
   
   #spec.source       = { :git => "http://EXAMPLE/FileBrowser.git" }
 
