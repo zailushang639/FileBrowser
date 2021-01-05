@@ -1,30 +1,15 @@
-Pod::Spec.new do |spec|
-
-  
-  spec.name         = "FileBrowser"
-  spec.version      = "1.0.0"
-  spec.summary      = "A short description of FileBrowser."
-
-  
-  spec.description  = "swift need"
-
-  spec.homepage     = "http://github.com/zailushang639/FileBrowser"
-  
-
-  spec.license      = "MIT"
-  
-
-  spec.author             = { "杨晨" => "18817776415@163.com" }
-  
-  spec.ios.deployment_target = "9.0"
-  
-  spec.source       = { :path => "./podtest"}
-
-  spec.vendored_frameworks = "FileBrowser.framework"
-
-  spec.requires_arc = true
-
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
-
+Pod::Spec.new do |s|
+  s.name         = "FileBrowser"
+  s.version      = "1.0.0"
+  s.summary      = "summary."
+  s.description  = "desc FileBrowser swift"
+  s.homepage     = "https://github.com/zailushang639/fileBrowser"
+  s.license      = "MIT"
+  s.author       = { "fangm" => "fangm@primeton.com" }
+  s.source       = { :git => "https://github.com/zailushang639/fileBrowser.git"  }
+  s.requires_arc = true
+  s.platform     = :ios, "9.0"
+  # 因为是发布自己的framework，这句话很重要
+  s.vendored_frameworks = "podtest/FileBrowser.framework"
 end
+
