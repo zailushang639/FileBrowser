@@ -8,14 +8,14 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "9.0"
   
-  s.source       = { :http => "http://github.com/zailushang639/fileBrowser.git", :tag => "#{s.version}"}
+  s.source       = { :git => "https://github.com/zailushang639/fileBrowser.git" }
   
   #spec.source       = { :git => "http://EXAMPLE/FileBrowser.git" }
 
   s.source_files = "**/*.{h}"
 
 
-  s.vendored_frameworks = "FileBrowser.framework"
+  s.vendored_frameworks = "podtest/FileBrowser.framework"
   
   s.requires_arc = true
   s.description  = "desc FileBrowser swift"
