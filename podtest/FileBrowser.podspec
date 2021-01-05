@@ -8,7 +8,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "9.0"
   
-  s.source       = { :http => "https://github.com/zailushang639/fileBrowser/blob/main/podtest/FileBrowser.zip" }
+  s.source       = { :http => "http://github.com/zailushang639/FileBrowser.git", :tag => "#{s.version}"}
+  
+  #spec.source       = { :git => "http://EXAMPLE/FileBrowser.git" }
 
   s.source_files = "**/*.{h}"
 
@@ -28,3 +30,4 @@ Pod::Spec.new do |s|
 
   # s.dependency "JSONKit", "~> 1.4"
 end
+
