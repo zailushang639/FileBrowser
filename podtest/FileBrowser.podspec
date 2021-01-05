@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source_files = "**/*.{h}"
 
 
-  s.vendored_frameworks = "podtest/FileBrowser.framework"
+  s.vendored_frameworks = "FileBrowser.framework"
   
   s.requires_arc = true
   s.description  = "desc FileBrowser swift"
