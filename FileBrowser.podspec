@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.author           = { 'zailushang639' => 'yangcc@primeton.com' }
   s.source           = { :git => 'https://github.com/zailushang639/FileBrowser.git', :tag => s.version.to_s }
   
-  s.vendored_frameworks = 'FileBrowser/'
+  s.vendored_frameworks = 'FileBrowser/FileBrowser.framework'
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'FileBrowser/Classes/**/*'
