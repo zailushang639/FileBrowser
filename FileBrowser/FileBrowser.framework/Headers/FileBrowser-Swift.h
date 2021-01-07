@@ -210,12 +210,20 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSDictionary;
 
 /// FBFile is a class representing a file in FileBrowser
 SWIFT_CLASS("_TtC11FileBrowser6FBFile")
 @interface FBFile : NSObject
 /// Display name. String.
 @property (nonatomic, readonly, copy) NSString * _Nonnull displayName;
+@property (nonatomic, readonly) BOOL isDirectory;
+/// File extension.
+@property (nonatomic, readonly, copy) NSString * _Nullable fileExtension;
+/// File attributes (including size, creation date etc).
+@property (nonatomic, readonly, strong) NSDictionary * _Nullable fileAttributes;
+/// NSURL file path.
+@property (nonatomic, readonly, copy) NSURL * _Nonnull filePath;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -227,6 +235,12 @@ SWIFT_CLASS("_TtC11FileBrowser6FBFile")
 /// File browser containing navigation controller.
 SWIFT_CLASS("_TtC11FileBrowser11FileBrowser")
 @interface FileBrowser : UINavigationController
+/// File types to exclude from the file browser.
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable excludesFileExtensions;
+/// File paths to exclude from the file browser.
+@property (nonatomic, copy) NSArray<NSURL *> * _Nullable excludesFilepaths;
+/// Override default preview and actionsheet behaviour in favour of custom file handling.
+@property (nonatomic, copy) void (^ _Nullable didSelectFile)(FBFile * _Nonnull);
 - (nonnull instancetype)init;
 /// Initialise file browser.
 /// \param initialPath NSURL filepath to containing directory.
@@ -459,12 +473,20 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSDictionary;
 
 /// FBFile is a class representing a file in FileBrowser
 SWIFT_CLASS("_TtC11FileBrowser6FBFile")
 @interface FBFile : NSObject
 /// Display name. String.
 @property (nonatomic, readonly, copy) NSString * _Nonnull displayName;
+@property (nonatomic, readonly) BOOL isDirectory;
+/// File extension.
+@property (nonatomic, readonly, copy) NSString * _Nullable fileExtension;
+/// File attributes (including size, creation date etc).
+@property (nonatomic, readonly, strong) NSDictionary * _Nullable fileAttributes;
+/// NSURL file path.
+@property (nonatomic, readonly, copy) NSURL * _Nonnull filePath;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -476,6 +498,12 @@ SWIFT_CLASS("_TtC11FileBrowser6FBFile")
 /// File browser containing navigation controller.
 SWIFT_CLASS("_TtC11FileBrowser11FileBrowser")
 @interface FileBrowser : UINavigationController
+/// File types to exclude from the file browser.
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable excludesFileExtensions;
+/// File paths to exclude from the file browser.
+@property (nonatomic, copy) NSArray<NSURL *> * _Nullable excludesFilepaths;
+/// Override default preview and actionsheet behaviour in favour of custom file handling.
+@property (nonatomic, copy) void (^ _Nullable didSelectFile)(FBFile * _Nonnull);
 - (nonnull instancetype)init;
 /// Initialise file browser.
 /// \param initialPath NSURL filepath to containing directory.
