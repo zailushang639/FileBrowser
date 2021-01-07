@@ -216,8 +216,6 @@ SWIFT_CLASS("_TtC11FileBrowser6FBFile")
 @interface FBFile : NSObject
 /// Display name. String.
 @property (nonatomic, readonly, copy) NSString * _Nonnull displayName;
-/// NSURL file path.
-@property (nonatomic, readonly, copy) NSURL * _Nonnull filePath;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -229,10 +227,6 @@ SWIFT_CLASS("_TtC11FileBrowser6FBFile")
 /// File browser containing navigation controller.
 SWIFT_CLASS("_TtC11FileBrowser11FileBrowser")
 @interface FileBrowser : UINavigationController
-/// File types to exclude from the file browser.
-@property (nonatomic, copy) NSArray<NSString *> * _Nullable excludesFileExtensions;
-/// Override default preview and actionsheet behaviour in favour of custom file handling.
-@property (nonatomic, copy) void (^ _Nullable didSelectFile)(FBFile * _Nonnull);
 - (nonnull instancetype)init;
 /// Initialise file browser.
 /// \param initialPath NSURL filepath to containing directory.
@@ -471,8 +465,6 @@ SWIFT_CLASS("_TtC11FileBrowser6FBFile")
 @interface FBFile : NSObject
 /// Display name. String.
 @property (nonatomic, readonly, copy) NSString * _Nonnull displayName;
-/// NSURL file path.
-@property (nonatomic, readonly, copy) NSURL * _Nonnull filePath;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -484,10 +476,6 @@ SWIFT_CLASS("_TtC11FileBrowser6FBFile")
 /// File browser containing navigation controller.
 SWIFT_CLASS("_TtC11FileBrowser11FileBrowser")
 @interface FileBrowser : UINavigationController
-/// File types to exclude from the file browser.
-@property (nonatomic, copy) NSArray<NSString *> * _Nullable excludesFileExtensions;
-/// Override default preview and actionsheet behaviour in favour of custom file handling.
-@property (nonatomic, copy) void (^ _Nullable didSelectFile)(FBFile * _Nonnull);
 - (nonnull instancetype)init;
 /// Initialise file browser.
 /// \param initialPath NSURL filepath to containing directory.
